@@ -57,8 +57,8 @@
     // console.log(totalYear);
 
     // 5. Sort the inventors by years lived
-    inventors.sort((a, b) => (a.passed - a.year) - (b.passed - b.year));
-    console.table(inventors);
+    // inventors.sort((a, b) => (a.passed - a.year) - (b.passed - b.year));
+    // console.table(inventors);
 
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
@@ -67,6 +67,8 @@
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    const lastNames = people.map(person => person.split(", ")[1]).sort((a, b) => a < b? -1: 1);
+    console.table(lastNames);
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
